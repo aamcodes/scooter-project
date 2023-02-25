@@ -71,7 +71,7 @@ class ScooterApp {
 		} else {
 			newDockedStation.push(scooter);
 			scooter.station = station;
-			// also removing user from scooter, this may cause issues??
+			// also removing user from scooter, this may cause issues if we call dock() on Scooter afterwards
 			scooter.user = null;
 			console.log('scooter is docked');
 		}
