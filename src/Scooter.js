@@ -24,7 +24,7 @@ class Scooter {
 	recharge() {
 		while (this.charge < 100) {
 			this.charge += 1;
-			console.log('Battery:' + this.charge + '%');
+			console.log('Battery: ' + this.charge + '%');
 		}
 		console.log('Fully charged!');
 	}
@@ -33,7 +33,7 @@ class Scooter {
 		setTimeout(() => {
 			this.isBroken = false;
 			console.log('repair completed');
-		}, 5000);
+		}, 3000);
 	}
 }
 

@@ -3,40 +3,40 @@ const User = require('../src/User');
 // User tests here
 describe('User Properties', () => {
 	// Object
-	let newUser = new User('aaron', 'password', 27);
+	let user = new User('aaron', 'password', 27);
 	it('should create a instance of a User class', () => {
-		expect(newUser).toBeInstanceOf(User);
+		expect(user).toBeInstanceOf(User);
 	});
 
 	// test username
 	it('should have a username', () => {
-		expect(newUser.username).toBe('aaron');
+		expect(user.username).toBe('aaron');
 	});
 
 	// test password
 	it('should have a password', () => {
-		expect(newUser.password).toBe('password');
+		expect(user.password).toBe('password');
 	});
 
 	// test age
 	it('should have an age', () => {
-		expect(newUser.age).toBe(27);
+		expect(user.age).toBe(27);
 	});
 });
 
 describe('User Methods', () => {
 	// test login
-	let newUser = new User('aaron', 'password', 27);
+	let user = new User('aaron', 'password', 27);
 
 	it('should be logged in', () => {
-		newUser.login('password');
-		expect(newUser.loggedIn).toBe(true);
+		user.login('password');
+		expect(user.loggedIn).toBe(true);
 	});
 
 	// test logout
 	it('should be logged out', () => {
-		newUser.login('password');
-		newUser.logout();
-		expect(newUser.loggedIn).toBe(false);
+		user.login('password');
+		user.logout();
+		expect(user.loggedIn).toBe(false);
 	});
 });
