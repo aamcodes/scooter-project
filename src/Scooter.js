@@ -9,6 +9,7 @@ class Scooter {
 		this.isBroken = isBroken;
 	}
 
+	//How do we let the user/developer know if the scooter is low on charge or broken?
 	rent(user) {
 		if (this.charge > 20 && !this.isBroken) {
 			this.user = user;

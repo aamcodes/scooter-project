@@ -34,6 +34,7 @@ class ScooterApp {
 		if (user.password === password) {
 			user.loggedIn = true;
 			console.log('user has been logged in');
+		//Could we be more specific about whether or not the password OR username is incorrect?
 		} else if (user === undefined || user === null) {
 			throw new Error('Username or password is incorrect');
 		} else if (user.password !== password) {
